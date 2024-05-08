@@ -12,6 +12,18 @@
   --gl-tooltip-size: 6px;
 }
 
+/* apparition des commentaires */
+[data-star-rating]:hover .gl-star-rating--stars[aria-label]:hover:before,
+[data-star-rating]:hover .gl-star-rating--stars[aria-label]:hover:after {
+  opacity: 1;
+}
+
+[data-star-rating] .gl-star-rating--stars[aria-label]:before,
+[data-star-rating] .gl-star-rating--stars[aria-label]:after {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 /* 🦊 Vos styles ici */
 body {
   background-color: #222;
@@ -21,9 +33,26 @@ body {
   text-align: center;
 }
 
-.LOGO {
+.retour {
+  margin-left: 3%;
+}
 
+.gl-star-rating {
+  justify-content: center;
+}
+
+a {
+  color: #F4DFD0;
+  text-decoration: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 20px;
+  gap: 80px;
+  margin-top: 20px;
+  align-items: center;
 }
 
 h1 {
@@ -92,6 +121,11 @@ h2 {
 .collum {
   text-align: left;
   padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.collum:hover {
+  transform: scale(1.2);
 }
 
 .librairie {
@@ -105,6 +139,52 @@ h2 {
   font-weight: 600;
   line-height: normal;
 
+}
+
+/* footer*/
+.contenu {
+  max-width: 350px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  -ms-flex-item-align: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(244, 223, 208, 0.13);
+  opacity: 0.5;
+  padding: 13px;
+  gap: 5px;
+}
+
+/* bouttons Footer */
+.svg-bouton {
+  background-color: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.svg-bouton:hover {
+  transform: scale(1.2);
+}
+
+.fleche {
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(-45deg);
+  position: absolute;
+  margin-left: 2px;
+  margin-top: -20px;
+  transition: transform 0.3s ease;
+}
+
+.open .fleche {
+  transform: rotate(130deg);
 }
 
 /* display ;grid 
