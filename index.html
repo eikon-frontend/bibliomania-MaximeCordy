@@ -1,32 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bibliomania</title>
-    <link rel="stylesheet" href="scripts/star-rating.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- 🦊 Votre page ici -->
 
-    <!-- 💡 Décommentez cette balise et placez-la dans votre code afin d'afficher le système de note Javascript -->
-    <!-- 
-        <select class="star-rating" aria-label="Note utilisateur">
-            <option value="">Select a rating</option>
-            <option value="5">Excellent</option>
-            <option value="4">Very Good</option>
-            <option value="3">Average</option>
-            <option value="2">Poor</option>
-            <option value="1">Terrible</option>
-        </select>
-    -->
-    <!-- 💡 Script pour gérer le rating d'un livre -->
-    <script src="scripts/star-rating.min.js"></script>
-    <script>
-      var stars = new StarRating(".star-rating", {
-        tooltip: "Choisissez votre note",
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliomania</title>
+  <link rel="stylesheet" href="scripts/star-rating.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- 🦊 Votre page ici -->
+  <div class="top">
+    <div class="retour"><svg width="78" height="37" viewBox="0 0 78 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="77" height="35.7714" rx="17.8857" fill="#222222" stroke="#F4DFD0" />
+        <path
+          d="M23.19 23V13.82H24.0825V16.0215L23.8615 15.7325C23.9635 15.4718 24.091 15.231 24.244 15.01C24.4027 14.7833 24.5642 14.5992 24.7285 14.4575C24.9722 14.2308 25.2583 14.0608 25.587 13.9475C25.9157 13.8285 26.2472 13.7605 26.5815 13.7435C26.9158 13.7208 27.219 13.7463 27.491 13.82V14.7465C27.1283 14.6615 26.743 14.6445 26.335 14.6955C25.927 14.7465 25.5445 14.9222 25.1875 15.2225C24.8758 15.4945 24.6492 15.8118 24.5075 16.1745C24.3658 16.5315 24.2752 16.9083 24.2355 17.305C24.1958 17.696 24.176 18.0785 24.176 18.4525V23H23.19ZM32.7166 23.255C31.8383 23.255 31.079 23.0595 30.4386 22.6685C29.7983 22.2718 29.3025 21.7137 28.9511 20.994C28.5998 20.2687 28.4241 19.413 28.4241 18.427C28.4241 17.424 28.597 16.5598 28.9426 15.8345C29.294 15.1035 29.787 14.5425 30.4216 14.1515C31.062 13.7605 31.8213 13.565 32.6996 13.565C33.5893 13.565 34.3486 13.769 34.9776 14.177C35.6123 14.5793 36.094 15.163 36.4226 15.928C36.757 16.693 36.9156 17.6138 36.8986 18.6905H35.8786V18.3505C35.8503 17.0925 35.567 16.1348 35.0286 15.4775C34.4903 14.8202 33.7196 14.4915 32.7166 14.4915C31.6796 14.4915 30.8778 14.8343 30.3111 15.52C29.7501 16.2 29.4696 17.1633 29.4696 18.41C29.4696 19.6453 29.7501 20.603 30.3111 21.283C30.8778 21.963 31.674 22.303 32.6996 22.303C33.408 22.303 34.0256 22.1387 34.5526 21.81C35.0853 21.4757 35.5075 20.9997 35.8191 20.382L36.7031 20.773C36.3348 21.5663 35.8021 22.1783 35.1051 22.609C34.4081 23.0397 33.612 23.255 32.7166 23.255ZM29.0956 18.6905V17.8065H36.3461V18.6905H29.0956ZM43.6494 23C43.162 23.1077 42.6804 23.1473 42.2044 23.119C41.7284 23.0963 41.3034 22.9915 40.9294 22.8045C40.561 22.6118 40.2834 22.3172 40.0964 21.9205C39.9434 21.5975 39.8584 21.2717 39.8414 20.943C39.8244 20.6143 39.8159 20.2375 39.8159 19.8125V11.27H40.8019V19.7955C40.8019 20.1808 40.8047 20.501 40.8104 20.756C40.8217 21.0053 40.8812 21.2348 40.9889 21.4445C41.1929 21.8355 41.5159 22.0735 41.9579 22.1585C42.3999 22.2378 42.9637 22.2237 43.6494 22.116V23ZM37.7589 14.7125V13.82H43.6494V14.7125H37.7589ZM48.8696 23.255C47.9572 23.255 47.1837 23.0482 46.5491 22.6345C45.9144 22.2208 45.4299 21.6485 45.0956 20.9175C44.7612 20.1865 44.5941 19.345 44.5941 18.393C44.5941 17.4353 44.7641 16.5938 45.1041 15.8685C45.4441 15.1375 45.9314 14.5708 46.5661 14.1685C47.2064 13.7662 47.9742 13.565 48.8696 13.565C49.7819 13.565 50.5554 13.7718 51.1901 14.1855C51.8304 14.5935 52.3149 15.1602 52.6436 15.8855C52.9779 16.6108 53.1451 17.4467 53.1451 18.393C53.1451 19.362 52.9779 20.212 52.6436 20.943C52.3092 21.6683 51.8219 22.235 51.1816 22.643C50.5412 23.051 49.7706 23.255 48.8696 23.255ZM48.8696 22.303C49.9519 22.303 50.7594 21.9403 51.2921 21.215C51.8304 20.4897 52.0996 19.549 52.0996 18.393C52.0996 17.2143 51.8304 16.2737 51.2921 15.571C50.7537 14.8683 49.9462 14.517 48.8696 14.517C48.1386 14.517 47.5351 14.6842 47.0591 15.0185C46.5831 15.3472 46.2261 15.8033 45.9881 16.387C45.7557 16.965 45.6396 17.6337 45.6396 18.393C45.6396 19.5717 45.9116 20.518 46.4556 21.232C47.0052 21.946 47.8099 22.303 48.8696 22.303ZM58.5427 23.2125C58.0384 23.2125 57.585 23.1388 57.1827 22.9915C56.786 22.8442 56.4404 22.6373 56.1457 22.371C55.851 22.099 55.6074 21.7817 55.4147 21.419C55.222 21.0507 55.0775 20.6483 54.9812 20.212C54.8905 19.7757 54.8452 19.3195 54.8452 18.8435V13.82H55.8312V18.597C55.8312 19.175 55.8879 19.6907 56.0012 20.144C56.1202 20.5973 56.2959 20.9827 56.5282 21.3C56.7662 21.6173 57.0609 21.8582 57.4122 22.0225C57.7692 22.1868 58.1885 22.269 58.6702 22.269C59.1689 22.269 59.5995 22.184 59.9622 22.014C60.3305 21.8383 60.6309 21.5947 60.8632 21.283C61.1012 20.9713 61.2769 20.603 61.3902 20.178C61.5092 19.7473 61.5687 19.2798 61.5687 18.7755L62.3422 18.869C62.3422 19.8607 62.1722 20.6795 61.8322 21.3255C61.4979 21.9658 61.0445 22.4418 60.4722 22.7535C59.8999 23.0595 59.2567 23.2125 58.5427 23.2125ZM61.6622 23V20.9345H61.5687V13.82H62.5547V23H61.6622ZM64.9263 23V13.82H65.8188V16.0215L65.5978 15.7325C65.6998 15.4718 65.8273 15.231 65.9803 15.01C66.139 14.7833 66.3005 14.5992 66.4648 14.4575C66.7085 14.2308 66.9947 14.0608 67.3233 13.9475C67.652 13.8285 67.9835 13.7605 68.3178 13.7435C68.6522 13.7208 68.9553 13.7463 69.2273 13.82V14.7465C68.8647 14.6615 68.4793 14.6445 68.0713 14.6955C67.6633 14.7465 67.2808 14.9222 66.9238 15.2225C66.6122 15.4945 66.3855 15.8118 66.2438 16.1745C66.1022 16.5315 66.0115 16.9083 65.9718 17.305C65.9322 17.696 65.9123 18.0785 65.9123 18.4525V23H64.9263Z"
+          fill="#F4DFD0" />
+        <line y1="-0.5" x2="11.3709" y2="-0.5" transform="matrix(0.797755 0.602982 -0.825975 0.563706 6.68579 18.772)"
+          stroke="#F4DFD0" />
+        <line y1="-0.5" x2="11.5577" y2="-0.5"
+          transform="matrix(-0.825975 0.563706 -0.797755 -0.602982 16.2322 12.2573)" stroke="#F4DFD0" />
+      </svg>
+    </div>
+    <div class="LOGO">
+      <svg width="32" height="54" viewBox="0 0 32 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="LOGO"
+          d="M29.8957 28.0992C30.2006 27.7429 30.8321 26.9963 31.3206 25.9337C32.1513 24.1275 32.0331 22.5723 31.9211 20.2891C31.8464 18.74 31.7499 16.3917 31.7033 13.3433C28.8285 14.6382 25.7951 15.9146 22.6092 17.1507C17.4975 19.1366 12.588 20.7816 7.94915 22.151C9.3772 21.5562 11.2346 20.7724 13.4 19.8398C15.2076 19.0622 17.7806 17.8044 21.234 16.3948C22.7616 15.7721 24.9488 14.821 27.556 13.4765C27.5716 11.4534 27.5871 9.43043 27.6027 7.41051C19.9491 12.07 12.2955 16.7325 4.64194 21.392C4.45837 21.3703 4.27481 21.3455 4.09124 21.3238C6.08864 19.8584 8.18249 18.3869 10.379 16.9215C14.3738 14.2541 18.2722 11.8841 22.015 9.78361C21.9247 7.38263 21.8314 4.97855 21.7412 2.57757C12.9364 9.91372 2.76275 18.3001 2.52319 18.0244C2.42674 17.9129 3.78324 16.2771 5.01839 15.0069C5.04328 14.9821 5.13039 14.8923 5.2424 14.7807C5.97664 14.0465 7.67536 12.4262 11.7511 9.14542C13.0142 8.12926 14.2525 7.15647 15.4627 6.22706C15.1734 4.15137 14.884 2.07569 14.5916 0C11.7075 2.40098 8.34428 5.65392 5.11795 9.92302C3.04588 12.6648 1.41871 15.3136 0.136894 17.6991C0.090226 28.8056 0.0466682 39.9151 0 51.0216C0.211563 51.539 0.780917 52.7131 2.0534 53.4257C3.02099 53.9678 3.92947 53.9833 4.98106 53.9988C5.80864 54.0112 7.09046 53.9338 8.60873 53.4133C16.2592 50.9813 23.9097 48.5494 31.5602 46.1174C31.5228 42.7529 31.4886 39.3854 31.4513 36.0178C31.4295 35.6243 31.2926 33.7903 29.7494 32.3404C28.3214 30.9959 26.6382 30.8782 26.212 30.8596C27.1173 30.4413 28.5796 29.6234 29.8894 28.0961L29.8957 28.0992ZM8.08916 27.0738C8.91674 26.8166 11.0386 26.1536 13.8138 25.2955C19.442 23.5544 22.2794 22.7055 23.5021 23.8766C24.0155 24.3692 24.1524 25.0476 24.1648 25.1127C24.4355 26.544 23.1661 27.8514 22.7212 28.3068C21.0256 30.0324 19.0624 30.3546 14.6352 31.2933C13.1542 31.6093 10.7897 32.1236 7.80915 32.8206C7.89937 30.906 7.99271 28.9883 8.08294 27.0738H8.08916ZM22.8861 41.5323C17.9548 43.0751 13.0204 44.618 8.08916 46.1608L8.11094 39.6828C9.98078 39.1282 11.471 38.6604 12.4169 38.3599C12.4169 38.3599 15.5281 37.3685 21.122 36.2625C21.8438 36.12 22.9265 35.9218 23.779 36.5259C24.6999 37.1796 24.7808 38.3723 24.787 38.521C24.8493 39.7169 24.1026 40.8879 22.8861 41.5323Z"
+          fill="white" />
+      </svg>
+    </div>
+  </div>
+
+  <img src="saccage_couverture 1.png" alt="image_saccage">
+  <h1>Saccage</h1>
+  <div class="soustitre">
+    <h2>Frederik Petters - 2019</h2>
+    <h2>Roman Graphique, édition Atrabile</h2>
+  </div>
+  <select class="star-rating" aria-label="Note utilisateur">
+    <option value="">Select a rating</option>
+    <option value="5">Excellent</option>
+    <option value="4">Très bien</option>
+    <option value="3">Moyen</option>
+    <option value="2">Nul</option>
+    <option value="1">Terrible</option>
+  </select>
+  <script src="scripts/star-rating.min.js"></script>
+  <script>
+    var stars = new StarRating(".star-rating", {
+      tooltip: "Choisissez votre note",
+    });
+  </script>
+
+  <div class="buttons">
+    <button class="accordion">Infos <div class="fleche"></div></button>
+    <div class="panel">
+      <p><span class="inner-title">Genre:</span> Bande dessinée ou récit graphique.</p>
+
+      <span class="inner-title">Thème principal:</span> Les dommages causés à la planète par l'activité
+      humaine. </p>
+
+      <span class="inner-title">Approche artistique:</span> Principalement visuelle, avec peu de texte.</p>
+
+      <span class="inner-title">Message:</span> Sensibilisation aux questions environnementales et
+      sociétales.</p>
+
+      <span class="inner-title">Esthétique:</span> Illustrations expressives et artistiques.</p>
+
+      <span class="inner-title">Réception:</span> Salué pour sa beauté artistique et son engagement social et
+      environnemental.</p>
+
+      <span class="inner-title">Auteur:</span> Frédérik Peeters, un auteur suisse reconnu dans le domaine de
+      la bande dessinée engagée.</p>
+      </p>
+
+    </div>
+    <button class="accordion">Description <div class="fleche"></div></button>
+    <div class="panel">
+      <p> Peeters, un artiste aussi insaisissable qu'imprévisible, défie les attentes avec son dernier ouvrage,
+        "Saccage".
+        Ce livre résiste à toute tentative de classification, se situant quelque part entre livre d'images et
+        bande
+        dessinée.</p>
+
+      Dans "Saccage", Peeters nous emmène dans une épopée tourmentée, explorant un monde chaotique et baroque où
+      les
+      folies et l'histoire de l'humanité semblent se mêler dans un tourbillon de visions fantasmagoriques. </p>
+
+      Est-ce une fable d'anticipation, une allégorie hallucinée ? Peut-être les deux.
+      Ce poème graphique, amer et saisissant, dépeint un monde en déliquescence, aussi terrifiant qu'un
+      cauchemar.</p>
+
+      Mais "Saccage" est bien plus qu'une simple expérience visuelle : c'est une œuvre puissante, habitée par
+      un
+      artiste au sommet de son art.
+      Les dessins de Peeters, dépourvus de texte mais loin d'être muets, offrent une lecture aussi riche que
+      celle
+      de
+      nombreux romans ou essais.</p>
+
+      Dans un paysage littéraire où le changement est la norme, "Saccage" se démarque comme un joyau
+      incandescent,
+      marquant les esprits de tous ceux qui osent s'y aventurer.</p>
+
+      En remportant le Prix Delémont’BD du meilleur album de bande dessinée suisse en 2019, il a également
+      reçu la
+      reconnaissance de ses pairs et du public.</p>
+    </div>
+    <button class="accordion">Points de ventes <div class="fleche"></div></button>
+    <div class="panel">
+      <div class="librairie">Librairie en ligne</div>
+      <div class="sites">
+        <div class="collum"><a href="https://www.fr.fnac.ch/a13216777/Frederik-Peeters-Saccage">Fnac</a></div>
+        <div class="collum"><a href="https://atrabile.org/catalogue/livres/saccage/">BDfugue</a></div>
+        <div class="collum"><a href="https://www.amazon.fr/Saccage-Frederik-Peeters/dp/2889230805">Amazone</a></div>
+        <div class="collum"><a
+            href="https://www.lalibrairie.com/livres/saccage_0-5620761_9782889230808.html?ctx=622a0fd7627b68d946b65af7fa6a9010">LaLibrairie.com</a>
+        </div>
+        <div class="collum"><a href="https://www.eyrolles.com/Litterature/Livre/saccage-9782889230808/">Libraire
+            Eyrolles</a></div>
+        <div class="collum"><a
+            href="https://www.ernster.com/fr/detail/ISBN-9782889230808/Peeters-Frederik/Saccage?CSPCHD=00v000000000XmjC8rAnPqKa5xDGm_lVbZ2Kngo4jMvM8Hwcjs">Ernster</a>
+        </div>
+        <div class="collum"><a href="https://atrabile.org/catalogue/livres/saccage/">Atrabile</a></div>
+        <div class="collum"><a href="https://www.payot.ch/Detail/saccage-frederik_peeters-9782889230808">payot</a></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <div class="contenu">
+    <div> <button class="svg-bouton"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28"
+          fill="none">
+          <path
+            d="M13.5813 0L26.8406 14.1982L26.8233 28H17.9375C17.949 25.4823 17.9605 22.964 17.9719 20.4462C17.9668 20.3567 17.957 20.2315 17.9375 20.0827C17.8077 19.108 17.4137 18.4199 17.3321 18.281C17.1352 17.9455 16.7544 17.3134 15.9664 16.8099C15.716 16.6501 15.0659 16.2454 14.1165 16.1817C13.923 16.1685 13.3067 16.1421 12.5779 16.3964C11.6556 16.7182 11.1209 17.2926 10.8837 17.5534C9.99005 18.5369 9.80742 19.6456 9.75975 20.1156L9.69083 28H0.840576V14.1653L13.5813 0Z"
+            fill="white" />
+        </svg></button></div>
+    <div><button class="svg-bouton"><svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.028 22.8052C19.2066 22.8052 24.2154 17.9239 24.2154 11.9026C24.2154 5.88125 19.2066 1 13.028 1C6.84935 1 1.84058 5.88125 1.84058 11.9026C1.84058 17.9239 6.84935 22.8052 13.028 22.8052Z"
+            stroke="white" stroke-width="2" stroke-miterlimit="10" />
+          <path d="M27.4569 27.721L20.0408 19.4844" stroke="white" stroke-width="2" stroke-miterlimit="10" />
+        </svg></button></div>
+    <div><button class="svg-bouton"><svg width="26" height="29" viewBox="0 0 26 29" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.84058 28.1602V1.13135" stroke="white" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M7.94043 28.1602V1.13135" stroke="white" stroke-width="3" stroke-miterlimit="10" />
+          <path d="M23.9468 28.4422L15.979 1" stroke="white" stroke-width="3" stroke-miterlimit="10" />
+        </svg></button></div>
+    <div><button class="svg-bouton"><svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.9242 18.947C20.426 18.947 23.2622 16.1108 23.2622 12.609C23.2622 9.10713 20.426 6.271 16.9242 6.271C13.4223 6.271 10.5862 9.10713 10.5862 12.609C10.5862 16.1108 13.4223 18.947 16.9242 18.947Z"
+            fill="white" />
+          <path
+            d="M16.9241 19.5942C12.0999 19.5942 8.02357 22.786 6.69214 27.1633C9.38236 29.6529 12.9754 31.1668 16.9241 31.1668C20.8728 31.1668 24.475 29.6438 27.1561 27.1633C25.8155 22.7769 21.7392 19.5942 16.9241 19.5942Z"
+            fill="white" />
+          <path
+            d="M16.9241 31.167C25.2545 31.167 32.0076 24.4139 32.0076 16.0835C32.0076 7.75311 25.2545 1 16.9241 1C8.59369 1 1.84058 7.75311 1.84058 16.0835C1.84058 24.4139 8.59369 31.167 16.9241 31.167Z"
+            stroke="white" stroke-width="2" stroke-miterlimit="10" />
+        </svg></button></div>
+
+  </div>
+
+  <!-- 💡 Décommentez cette balise et placez-la dans votre code afin d'afficher le système de note Javascript -->
+
+
+</body>
+
 </html>
